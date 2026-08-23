@@ -29,9 +29,9 @@ class HandLandmarkDetector:
         self.min_tracking_confidence: float = min_tracking_confidence
         self.model = model_path
 
-        # initializing mediapipe hand detector
+        # initializing mediapipe hand detector using CPU delegate for Windows compatibility
         base_options = python.BaseOptions(
-            self.model, delegate=python.BaseOptions.Delegate.GPU
+            self.model, delegate=python.BaseOptions.Delegate.CPU
         )
         options = vision.HandLandmarkerOptions(
             base_options,
