@@ -1,0 +1,35 @@
+[project]
+name = "hand-gesture-decoder"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "==3.12.9"
+dependencies = [
+    "jupyter>=1.1.1",
+    "keras>=3.10.0",
+    "mediapipe>=0.10.21",
+    "opencv-python-headless>=4.11.0.86",
+    "pandas>=2.2.3",
+    "pip>=25.1.1",
+    "pyqt5>=5.15.11",
+    "pyright>=1.1.401",
+    "pyttsx3>=2.98",
+    "scikit-learn>=1.6.1",
+    "seaborn>=0.13.2",
+    "tensorflow[and-cuda]>=2.19.0",
+]
+
+
+
+
+[tool.pyright]
+defineConstant = { DEBUG = true }
+include = ["src","utils","app"]
+venvPath = "."
+venv = ".venv"
+
+reportMissingImports = "error"
+reportMissingTypeStubs = false
+
+pythonVersion = "3.12.9"
+pythonPlatform = "Linux"
